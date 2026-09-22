@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pantai Losari | Wisata Makassar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            color: #333;
+        }
+
+        h1, h2, h3, p, ul, li, table, form, input, textarea, select {
+            margin-top: 0;
+        }
+
+        header {
+            background: #2f8f9d;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            border-bottom: 5px solid #d9a441;
+        }
+
+        header h1 {
+            margin-bottom: 10px;
+            font-size: 40px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 20px;
+            
+        }
+
+        nav a {
+            background: white;
+            color: #2f8f9d;
+            padding: 8px 15px;
+            border: 2px solid #d9a441;
+            border-radius: 5px;
+            margin: 5px;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            background: #d9a441;
+            color: white;
+        }
+
+        main {
+            width: 90%;
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        section {
+            background: white;
+            border: 2px solid #ccc;
+            padding: 20px;
+            margin: 10px 0;
+            border-radius: 8px;
+        }
+
+        #tentang {
+            background: #f5eedd;
+        }
+
+        .about-layout {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .about-layout img {
+            width: 45%;
+            min-width: 250px;
+            height: 400px;
+            border: 3px solid #2f8f9d;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        .about-copy {
+            width: 50%;
+            min-width: 250px;
+            font-size: 17px;
+            text-align: justify;
+        }
+
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .gallery-grid img {
+            width: 30%;
+            min-width: 180px;
+            height: 200px;
+            border: 2px solid #bbb;
+            padding: 5px;
+            background: #eee;
+        }
+
+        .gallery-grid img:hover {
+            border-color: #d9a441;
+        }
+
+        .activity-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .activity-list li {
+            flex: 1 1 200px;
+            background: #f5f5f5;
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin: 5px;
+        }
+
+        .info-box {
+            background: #eef9fb;
+            border: 2px solid #9ed0d8;
+            padding: 15px;
+            margin: 10px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #999;
+            padding: 10px;
+            text-align: left;
+        }
+
+        .form-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .form-item {
+            flex: 1 1 250px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        label {
+            font-weight: bold;
+            color: #1d4d57;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #aaa;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-top: 15px;
+            flex-wrap: nowrap;
+        }
+
+        input[type="submit"], input[type="reset"] {
+            background: #2f8f9d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        input[type="submit"]:hover,
+        input[type="reset"]:hover {
+            background: #d9a441;
+        }
+
+        .tips-list {
+            background: #fff7e8;
+            border: 5px solid #d9a441;
+            padding: 15px;
+            margin-top: 20px;
+        }
+
+        video {
+            width: 100%;
+            max-width: 700px;
+            border: 2px solid #ccc;
+            padding: 5px;
+            background: #ddd;
+        }
+
+        footer {
+            background: #223b3f;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 760px) {
+            nav {
+                flex-direction: column;
+            }
+
+            .about-layout {
+                display: block;
+            }
+
+            .about-layout img,
+            .about-copy {
+                width: 100%;
+            }
+
+            .gallery-grid img {
+                width: 100%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 28px;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            input[type="submit"],
+            input[type="reset"] {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header id="beranda">
+        <h1>Pantai Losari</h1>
+        <p>Wisata Pantai yang terkenal di Makassar</p>
+        <nav>
+            <a href="#beranda">Beranda</a>
+            <a href="#tentang">Tentang</a>
+            <a href="#galeri">Galeri</a>
+            <a href="#aktivitas">Aktivitas</a>
+            <a href="#lokasi">Lokasi</a>
+            <a href="#formulir">Formulir</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="tentang">
+            <h2>Tentang Pantai Losari</h2>
+            <div class="about-layout">
+                <img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1000&q=80" alt="Pantai Losari" />
+                <div class="about-copy">
+                    <p>
+                        Pantai Losari adalah salah satu destinasi wisata paling terkenal di Makassar.
+                        Pantai ini memiliki pemandangan sunset yang sangat indah dan banyak pengunjung
+                        datang untuk menikmati suasana laut dan kuliner khas daerah.
+                    </p>
+                    <p>
+                        Pantai Losari juga menjadi tempat yang cocok untuk berjalan santai, berfoto,
+                        dan menikmati makanan khas Makassar di sekitar area pantai.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="galeri">
+            <h2>Galeri Foto</h2>
+            <div class="gallery-grid">
+                <img src="Assets/Pantai_Losari_1.jpg" alt="Pantai Losari saat sore hari" />
+                <img src="Assets/Pantai_Losari_2.jpg" alt="Wisatawan di Pantai Losari" />
+                <img src="Assets/Pantai_Losari_3.jpg" alt="Kuliner di sekitar Pantai Losari" />
+            </div>
+        </section>
+
+        <section id="aktivitas">
+            <h2>Daftar Aktivitas</h2>
+            <ul class="activity-list">
+                <li>
+                    <h3>Menikmati Sunset</h3>
+                    <p>Menunggu waktu senja sambil menikmati pemandangan laut yang memesona dan warna langit yang berubah.</p>
+                </li>
+                <li>
+                    <h3>Jalan Santai di Tepi Pantai</h3>
+                    <p>Berjalan santai sambil menikmati angin laut dan suasana ramai pengunjung di sekitar area wisata.</p>
+                </li>
+                <li>
+                    <h3>Mencicipi Kuliner</h3>
+                    <p>Menikmati makanan khas Makassar seperti pisang epe, coto, dan berbagai jajanan pinggir pantai.</p>
+                </li>
+                <li>
+                    <h3>Fotografi</h3>
+                    <p>Memotret pemandangan laut, sunset, dan aktivitas wisatawan untuk kenang-kenangan.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section id="lokasi">
+            <h2>Informasi Lokasi</h2>
+            <div class="info-box">
+                <p><strong>Alamat:</strong> Jl. Penghibur, Kecamatan Ujung Tanah, Makassar, Sulawesi Selatan</p>
+                <p><strong>Jam Buka:</strong> Setiap hari, 08.00 - 22.00 WITA</p>
+                <p><strong>Biaya Masuk:</strong> Gratis</p>
+                <p><strong>Transportasi:</strong> Mudah dijangkau dari pusat kota dan kendaraan umum</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Tabel Informasi</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Fasilitas</th>
+                        <th>Deskripsi</th>
+                        <th>Catatan</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Area Santai</td>
+                        <td>Tempat duduk dan area panorama untuk menikmati sunset</td>
+                        <td>Tersedia di sepanjang tepian pantai</td>
+                    </tr>
+                    <tr>
+                        <td>Warung Kuliner</td>
+                        <td>Berbagai makanan dan minuman khas Makassar</td>
+                        <td>Biasanya ramai saat sore hari</td>
+                    </tr>
+                    <tr>
+                        <td>Toilet Umum</td>
+                        <td>Fasilitas kebersihan untuk pengunjung</td>
+                        <td>Terletak di area utama wisata</td>
+                    </tr>
+                    <tr>
+                        <td>Parkir</td>
+                        <td>Area parkir kendaraan roda dua dan roda empat</td>
+                        <td>Disarankan datang lebih awal saat weekend</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="formulir">
+            <h2>Formulir Reservasi & Pertanyaan</h2>
+            <form>
+                <div class="form-grid">
+                    <div class="form-item">
+                        <label for="nama">Nama Lengkap</label>
+                        <input type="text" id="nama" name="nama" placeholder="Masukkan nama Anda" required />
+                    </div>
+
+                    <div class="form-item">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+
+                    <div class="form-item">
+                        <label for="tanggal">Tanggal Kunjungan</label>
+                        <input type="date" id="tanggal" name="tanggal" required />
+                    </div>
+
+                    <div class="form-item">
+                        <label for="jumlah">Jumlah Pengunjung</label>
+                        <input type="number" id="jumlah" name="jumlah" min="1" max="20" value="1" />
+                    </div>
+
+                    <div class="form-item">
+                        <label for="keperluan">Keperluan Kunjungan</label>
+                        <select id="keperluan" name="keperluan">
+                            <option value="wisata">Wisata keluarga</option>
+                            <option value="kuliner">Kuliner malam</option>
+                            <option value="foto">Fotografi</option>
+                            <option value="lainnya">Lainnya</option>
+                        </select>
+                    </div>
+
+                    <div class="form-item" style="flex-basis: 100%;">
+                        <label for="pesan">Pesan Tambahan</label>
+                        <textarea id="pesan" name="pesan"></textarea>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <input type="submit" value="Kirim Data" />
+                    <input type="reset" value="Reset" />
+                </div>
+            </form>
+
+            <div class="tips-list">
+                <h3>Tips Berwisata</h3>
+                <ul>
+                    <li>Datang sebelum sunset agar dapat menikmati pemandangan paling indah.</li>
+                    <li>Bawa alas duduk dan minuman ringan untuk kenyamanan.</li>
+                    <li>Pastikan membawa uang tunai karena beberapa kios masih memakai pembayaran kas.</li>
+                    <li>Jaga kebersihan area dan patuhi arahan petugas setempat.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Multimedia</h2>
+            <video controls>
+                <source src="Assets/Pantai_Losari.mp4" type="video/mp4" />
+                Browser Anda tidak mendukung pemutar video.
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <div>
+            <strong>Pantai Losari</strong>
+            <p>Destinasi wisata andalan Kota Makassar</p>
+            <p>Instagram: @pantailosari</p>
+            <p>Email: info@pantailosari.makassar</p>
+        </div>
+        <p>© 2026 Pantai Losari - Makassar</p>
+    </footer>
+</body>
+</html>
